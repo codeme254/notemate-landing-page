@@ -12,6 +12,10 @@ html {
   font-size: 62.5%;
 }
 
+html, body{
+  max-width: 1800px;
+}
+
 body {
   font-size: 1.4rem;
   font-family: var(--open-sans-font);
@@ -60,6 +64,12 @@ body {
   justify-content: space-between;
   padding: 0 2rem;
   border-bottom: 1px solid var(--color-anti-flash-white);
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--color-heavy-white);
+  z-index: 1000000000;
 }
 
 .header__nav-list {
