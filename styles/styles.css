@@ -1,0 +1,309 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Oswald:wght@200;300;400;500;600;700&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.4rem;
+  font-family: var(--open-sans-font);
+  color: var(--color-black-main);
+  position: relative;
+}
+
+:root {
+  --open-sans-font: "Open Sans", Verdana, Geneva, Tahoma, sans-serif;
+  --oswald-font: "Oswald", Verdana, Geneva, Tahoma, sans-serif;
+  --color-primary: crimson;
+  --color-primary-light: #d62839;
+  --color-primary-lightest: #ba324f;
+  --color-secondary: #2b2d42;
+  --color-secondary-light: #8d99ae;
+  --color-snow-white: #fbf5f3;
+  --color-ivory-white: #f6f7eb;
+  --color-anti-flash-white: #edf2ef;
+  --color-heavy-white: #edf2f4;
+  --color-black-night: #0f110c;
+  --color-black-main: #222;
+  --color-black-light: #333;
+  scroll-behavior: smooth;
+}
+
+/* utilities */
+.logo {
+  font-family: var(--oswald-font);
+  font-size: 4rem;
+}
+
+.logo span {
+  color: var(--color-primary);
+}
+
+.section-title {
+  font-size: 5rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+/* End of utilities */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  border-bottom: 1px solid var(--color-anti-flash-white);
+}
+
+.header__nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.header__nav-item a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 2rem 3rem;
+  font-weight: bold;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: var(--color-primary-lightest);
+  transition: all 0.5s ease;
+}
+
+.header__nav-item a:hover {
+  background-color: var(--color-primary-light);
+  color: var(--color-anti-flash-white);
+}
+
+.header__cta-btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 2rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: var(--color-black-light);
+}
+
+.header__cta-btn--main {
+  background-color: var(--color-primary);
+  border-radius: 100px;
+  color: var(--color-anti-flash-white);
+}
+/* End of the header section */
+
+/* the home section */
+.home {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.home__txt-small {
+  padding: 2rem;
+  text-transform: capitalize;
+  font-weight: bold;
+  border: 2px solid var(--color-primary-light);
+  border-radius: 100px;
+}
+
+.home__campain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.home__campaign--title {
+  font-size: 8rem;
+  font-family: var(--oswald-font);
+  letter-spacing: 2px;
+}
+
+.home__campaign--subtitle {
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.campaign__cta--link {
+  text-decoration: none;
+  padding: 1rem;
+  font-weight: bold;
+  background-color: var(--color-primary-light);
+  color: var(--color-anti-flash-white);
+  border-radius: 100px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.home__image img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+/* end of the home section */
+
+/* features section */
+.features {
+  margin-top: 10rem;
+}
+
+.features__container {
+  width: 90%;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(38rem, 1fr));
+  justify-items: center;
+  gap: 2rem;
+}
+
+.feature {
+  --size: 38rem;
+  width: var(--size);
+  padding: 0.5rem;
+  background-color: var(--color-ivory-white);
+  box-shadow: 0 0 5px #777;
+  margin-bottom: 3rem;
+}
+
+.feature__image-container {
+  height: 25rem;
+  margin-bottom: 2rem;
+}
+
+.feature__image-container--img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.feature__body--title {
+  font-size: 2.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.feature__body--text {
+  text-align: justify;
+  font-weight: 500;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.feature__body-cta--button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  background-color: var(--color-primary);
+  font-weight: bold;
+  color: var(--color-anti-flash-white);
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+/* end of the feature section */
+
+/* about section */
+.about-section {
+  margin-top: 10rem;
+  padding: 2rem 10rem;
+}
+
+.about-text {
+  margin-top: 3rem;
+  font-size: 1.6rem;
+  text-align: justify;
+  line-height: 1.9;
+  font-weight: 500;
+  text-indent: 20rem;
+}
+/* end of the about section */
+
+/* contribute section */
+.contribute {
+  padding: 2rem 10rem;
+}
+
+.contribute-section-text {
+  margin-top: 3rem;
+  font-size: 1.6rem;
+  text-align: justify;
+  line-height: 1.9;
+  font-weight: 500;
+  text-indent: 20rem;
+  margin-bottom: 3rem;
+}
+
+.contribution-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.contribute-section__icon {
+  --size: 15rem;
+  width: var(--size);
+  height: var(--size);
+}
+
+.contribution-link p {
+  margin-top: 2rem;
+  text-align: center;
+  color: var(--color-black-light);
+  text-transform: capitalize;
+  font-weight: bold;
+  width: max-content;
+}
+/* end of the contribute section */
+
+/* following section */
+.social-section {
+  margin-top: 10rem;
+}
+
+.social-container {
+  padding: 2rem 10rem;
+}
+
+.social-link {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.social-link__icon {
+  --size: 15rem;
+  width: var(--size);
+  height: var(--size);
+  margin-bottom: 2rem;
+}
+
+.social-link__text {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--color-black-main);
+}
+
+.social-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+/* end of the following section */
